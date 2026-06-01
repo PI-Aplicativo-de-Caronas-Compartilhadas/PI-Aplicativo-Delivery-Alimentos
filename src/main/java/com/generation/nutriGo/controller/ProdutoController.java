@@ -20,6 +20,7 @@ import org.springframework.web.server.ResponseStatusException;
 
 import com.generation.nutriGo.model.Produto;
 import com.generation.nutriGo.repository.ProdutoRepository;
+import com.generation.nutriGo.service.ProdutoService;
 
 import jakarta.validation.Valid;
 
@@ -30,6 +31,9 @@ public class ProdutoController {
 
 	@Autowired
 	private ProdutoRepository produtoRepository;
+	
+	@Autowired
+	private ProdutoService produtoService;
 
 	@GetMapping
 	public ResponseEntity<List<Produto>> selecionarTodos() {
@@ -48,6 +52,13 @@ public class ProdutoController {
 	public ResponseEntity<List<Produto>> selecionarPorNome(@PathVariable String nome) {
 		return ResponseEntity.ok(produtoRepository.findAllByNomeContainingIgnoreCase(nome));
 
+	}
+	
+	@GetMapping("/recomendacoes")
+	public ResponseEntity<List<Produto>> recomendarProduto(){
+		
+		return ResponseEntity.ok(produtoService.recomendarProdutos());
+		
 	}
 
 	@PostMapping
