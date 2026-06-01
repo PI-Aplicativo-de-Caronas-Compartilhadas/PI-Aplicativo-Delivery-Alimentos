@@ -10,7 +10,7 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
 @Entity
-@Table(name = "tb_nutrigo")
+@Table(name = "tb_usuario")
 public class Usuario {
 	
 	@Id
@@ -33,7 +33,7 @@ public class Usuario {
 	
 	//@OneToMany(fetch = FetchType.LAZY, mappedBy = "usuario", cascade = CascadeType.REMOVE)
 	//@JsonIgnoreProperties(value = "usuario", allowSetters = true)
-	//private List<Produtos> produtos;
+	//private List<Produto> produto;
 
 	public Long getId() {
 		return id;
