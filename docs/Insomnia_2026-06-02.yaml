@@ -1,0 +1,550 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Plataforma de Delivery de Alimentos Saudáveis
+meta:
+  id: wrk_056e228aa60b4930af30aefac17d6be6
+  created: 1780319511274
+  modified: 1780319511274
+  description: ""
+collection:
+  - name: Categoria
+    meta:
+      id: fld_9aab40d2a5b549ad94003a743100f997
+      created: 1780330412025
+      modified: 1780336391237
+      sortKey: -1780330412025
+      description: ""
+    children:
+      - url: http://localhost:8080/categoria
+        name: Consultar Todas
+        meta:
+          id: req_b45870c7d1664c95a6df1662fe5a4189
+          created: 1780331588136
+          modified: 1780336420033
+          isPrivate: false
+          description: ""
+          sortKey: -1780331588136
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categoria/1
+        name: Consultar por ID
+        meta:
+          id: req_ae3b00947b6740cc81f99485f2abac70
+          created: 1780331609092
+          modified: 1780336417979
+          isPrivate: false
+          description: ""
+          sortKey: -1780331609092
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categoria/nome/Low%20Carb
+        name: Consultar por Nome
+        meta:
+          id: req_0dff7a0fabe0421b8538068970f4b5ef
+          created: 1780331639855
+          modified: 1780336414075
+          isPrivate: false
+          description: ""
+          sortKey: -1780331639855
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categoria
+        name: Cadastrar Categoria
+        meta:
+          id: req_1914a0a0a84442ee98913d69260251c0
+          created: 1780331660340
+          modified: 1780336404392
+          isPrivate: false
+          description: ""
+          sortKey: -1780331660340
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Marmitas Low Carb"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categoria
+        name: Atualizar Categoria
+        meta:
+          id: req_4060fdc304ea4c62a7c60a72fe38d5f2
+          created: 1780331691594
+          modified: 1780345859233
+          isPrivate: false
+          description: ""
+          sortKey: -1780331691594
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 1,
+              "nome": "Marmitas Low Carb & Keto"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categoria/3
+        name: Delete Categoria
+        meta:
+          id: req_5a84a0f0447348da8846eb25d500c222
+          created: 1780331722753
+          modified: 1780345851883
+          isPrivate: false
+          description: ""
+          sortKey: -1780331722753
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuário
+    meta:
+      id: fld_e6b68fe6955940448d7762a16fac7776
+      created: 1780330431718
+      modified: 1780336394769
+      sortKey: -1780330431718
+      description: ""
+    children:
+      - url: http://localhost:8080/usuario
+        name: Listar Todos os Usuários
+        meta:
+          id: req_a40839d95f9d4851ab80c8e40b8aa5ab
+          created: 1780331735581
+          modified: 1780336422215
+          isPrivate: false
+          description: ""
+          sortKey: -1780331735581
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuario/1
+        name: Consultar Usuário por ID
+        meta:
+          id: req_86e14e9bf0f74eb8b93382d240d067f6
+          created: 1780331759979
+          modified: 1780336424260
+          isPrivate: false
+          description: ""
+          sortKey: -1780331759979
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuario
+        name: Cadastrar Usuário
+        meta:
+          id: req_79924eb9d87949a8b5fdca90bbafdbe2
+          created: 1780331793149
+          modified: 1780341947958
+          isPrivate: false
+          description: ""
+          sortKey: -1780331793149
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Roberta Tester",
+              "usuario": "roberta@nutrigo.com",
+              "senha": "mypassword123",
+              "foto": "https://imagens.com/roberta-qa.png"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuario
+        name: Atualizar Usuário
+        meta:
+          id: req_f114bfd7a9994754a152c5c589775818
+          created: 1780331831149
+          modified: 1780336428198
+          isPrivate: false
+          description: ""
+          sortKey: -1780331831149
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 1,
+              "nome": "Roberta Tester Atualizada",
+              "usuario": "roberta.qa@nutrigo.com",
+              "senha": "novasenhasegura123",
+              "foto": "https://imagens.com/roberta-nova.png"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuario/2
+        name: Deletar Usuário
+        meta:
+          id: req_0d15bc6ab87246f2ab3152180f4738a0
+          created: 1780332250315
+          modified: 1780345485607
+          isPrivate: false
+          description: ""
+          sortKey: -1780332250315
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuario/nome/Roberta
+        name: Consultar por Nome
+        meta:
+          id: req_3795c003e1a443c59188b7c50bef7d5b
+          created: 1780332877670
+          modified: 1780338583156
+          isPrivate: false
+          description: ""
+          sortKey: -1780331776564
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Produto
+    meta:
+      id: fld_5b6e52fe70c34336acbef3f82b21c621
+      created: 1780330441738
+      modified: 1780336396815
+      sortKey: -1780330441738
+      description: ""
+    children:
+      - url: http://localhost:8080/produto
+        name: Listar Todos os Produtos
+        meta:
+          id: req_00798b334066442e802e6cceee3b35f8
+          created: 1780331927507
+          modified: 1780342002029
+          isPrivate: false
+          description: ""
+          sortKey: -1780331927507
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produto/1
+        name: Buscar Produto por ID
+        meta:
+          id: req_5fa911ba11da4e859d93312181edecf0
+          created: 1780331951413
+          modified: 1780342034030
+          isPrivate: false
+          description: ""
+          sortKey: -1780331951413
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produto/nome/Frango
+        name: Consultar Produto por Nome
+        meta:
+          id: req_29ce02ea188e40c9af5e5ecf0d6eaa09
+          created: 1780331971714
+          modified: 1780342042339
+          isPrivate: false
+          description: ""
+          sortKey: -1780331971714
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produto
+        name: Cadastrar Produto
+        meta:
+          id: req_b6f41fcfe6b54b6cbb11a7e0e56c5869
+          created: 1780332011077
+          modified: 1780345729348
+          isPrivate: false
+          description: ""
+          sortKey: -1780332011077
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "nome": "Sanduba Natureba",
+              "preco": 24.90,
+              "calorias": 320,
+              "descricao": "teste 04",
+              "categoria": { "id": 2 },
+              "usuario": { "id": 2 }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produto
+        name: Atualizar Produto
+        meta:
+          id: req_b541d3ce711643ecb56eadeec81e2bfa
+          created: 1780332041157
+          modified: 1780342165528
+          isPrivate: false
+          description: ""
+          sortKey: -1780332041157
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "id": 1,
+              "nome": "Frango Grelhado com Legumes Orgânicos",
+              "preco": 28.50,
+              "calorias": 310,
+              "descricao": "Peito de frango grelhado acompanhado de brócolis e cenoura 100% orgânicos.",
+              "categoria": { "id": 1 },
+              "usuario": { "id": 1 }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produto/2
+        name: Deletar Produto
+        meta:
+          id: req_6de5c6ce097b43b0a9b836d2db186138
+          created: 1780332067687
+          modified: 1780345453516
+          isPrivate: false
+          description: ""
+          sortKey: -1780332067687
+        method: DELETE
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produto/recomendacoes
+        name: Consultar Recomedações Saudáveis (Service Especial)
+        meta:
+          id: req_f6eec65a4ccb42988f19265d75955f76
+          created: 1780332177290
+          modified: 1780344089568
+          isPrivate: false
+          description: ""
+          sortKey: -1780332177290
+        method: GET
+        headers:
+          - name: User-Agent
+            value: insomnia/12.6.0
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_4a2df87af10f16a498c1786e8e8120c3ccf89322
+    created: 1780319511280
+    modified: 1780319511280
+environments:
+  name: Base Environment
+  meta:
+    id: env_4a2df87af10f16a498c1786e8e8120c3ccf89322
+    created: 1780319511279
+    modified: 1780319511279
+    isPrivate: false
